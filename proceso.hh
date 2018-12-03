@@ -6,7 +6,6 @@
 #define _PROCESO_HH_
 
 #ifndef NO_DIAGRAM
-#include "PRO2Excepcio.hh"
 #include <iostream>
 #include <string>
 #endif
@@ -38,6 +37,13 @@ public:
         @coste Constante
     */ 
     Proceso(string idprocesador, string iduser, int mem, int t);
+    
+    /** @brief Consultora con valores
+     *  @pre cierto
+     *  @post Devuelve el identificador del proceso del parámetro implícito
+     *  @coste constante
+    */
+    
     
     //Destructoras
     /** @brief Destructora por defecto

@@ -6,18 +6,18 @@
 #define _CJT_USUARIOS_HH_
 
 #include "usuario.hh"
-
 #ifndef NO_DIAGRAM
+#include <list>
+#include <string>
 #endif
 
 /** @class Conj_Usuarios
     @brief 
 */
 
-class Conj_Usuarios {
+class Cjt_usuarios {
 private:
-  vector<Usuario> v_usu;     //estructura de datos del conjunto de usuarios
-  static const int MAX_USUARIOS = 100000; //numero maximo de usuarios en el vector
+  list<Usuario> l_usu;     //estructura de datos del conjunto de usuarios
                                          
 public:
   //Constructoras

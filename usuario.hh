@@ -9,6 +9,7 @@
 
 #ifndef NO_DIAGRAM
 #include <queue>
+#include <string>
 #endif
 
 /** @class Usuario
@@ -19,7 +20,7 @@ class Usuario {
 private:
     
     string iduser;     //identificador de usuario con minusculas y numeros 
-    list<Proceso> lproceso;  //estructura de los procesos pendientes de un usuario                                                                                                          asegurarnos de no llegar a llenar la cola de procesos*/
+    list<Proceso> l_proceso;  //estructura de los procesos pendientes de un usuario                                                                                                          asegurarnos de no llegar a llenar la cola de procesos*/
     
 public: 
 
