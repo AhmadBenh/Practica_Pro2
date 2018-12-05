@@ -44,6 +44,8 @@ public:
      *  @coste constante
     */
     
+    const string consultar_id() const;
+    
     
     //Destructoras
     /** @brief Destructora por defecto

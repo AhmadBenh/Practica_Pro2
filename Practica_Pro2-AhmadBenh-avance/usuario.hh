@@ -39,6 +39,8 @@ public:
   */ 
   Usuario(string iduser);
   
+  void poner_proceso_en_usuario(string iduser, Proceso& p);
+  
   //Destructoras
   /** @brief Destructora por defecto. 
       @pre <em>cierto</em>
