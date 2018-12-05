@@ -7,7 +7,6 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
-#include <string>
 #endif
 
 /** @class Proceso
@@ -45,6 +44,12 @@ public:
     */
     
     const string consultar_id() const;
+
+    const string Proceso::consultar_idusu() const;
+
+    const int Proceso::consultar_mem() const;
+
+    const int Proceso::consultar_time() const; 
     
     
     //Destructoras

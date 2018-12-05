@@ -5,10 +5,10 @@
 #ifndef _USUARIO_HH_
 #define _USUARIO_HH_
 
-#include "proceso.hh"
+#include "Proceso.hh"
 
 #ifndef NO_DIAGRAM
-#include <queue>
+#include <list>
 #include <string>
 #endif
 
@@ -38,6 +38,12 @@ public:
       @coste Constante
   */ 
   Usuario(string iduser);
+  
+  string Usuario::consultar_usuario();
+
+  int Usuario::size_l_proceso();
+
+  bool Usuario::busca_l_proceso(Proceso& p);
   
   void poner_proceso_en_usuario(string iduser, Proceso& p);
   

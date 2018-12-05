@@ -1,4 +1,4 @@
-#include "proceso.hh"
+#include "Proceso.hh"
 using namespace std;
 
 Proceso::Proceso(){
@@ -17,6 +17,18 @@ Proceso::Proceso(string idprocesador, string iduser, int mem, int t){
 
 const string Proceso::consultar_id() const {
     return idpro;
+}
+
+const string Proceso::consultar_idusu() const {
+    return idusu;
+}
+
+const int Proceso::consultar_mem() const {
+    return mem;
+}
+
+const int Proceso::consultar_time() const {
+    return time;
 }
 
 

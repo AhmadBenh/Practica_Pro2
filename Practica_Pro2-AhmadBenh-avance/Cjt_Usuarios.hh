@@ -5,7 +5,7 @@
 #ifndef _CJT_USUARIOS_HH_
 #define _CJT_USUARIOS_HH_
 
-#include "usuario.hh"
+#include "Usuario.hh"
 #ifndef NO_DIAGRAM
 #include <list>
 #include <string>
@@ -15,7 +15,7 @@
     @brief 
 */
 
-class Cjt_usuarios {
+class Cjt_Usuarios {
 private:
   list<Usuario> l_usu;     //estructura de datos del conjunto de usuarios
                                          

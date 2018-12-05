@@ -5,10 +5,10 @@
 #ifndef _PROCESADOR_HH_
 #define _PROCESADOR_HH_
 
-#include "proceso.hh"
+#include "Proceso.hh"
 
 #ifndef NO_DIAGRAM
-#include <vector>
+#include <list>
 #endif
 
 /** @class Procesador

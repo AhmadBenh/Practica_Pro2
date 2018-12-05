@@ -1,4 +1,4 @@
-#include "procesador.hh"
+#include "Procesador.hh"
 using namespace std;
 
 Procesador::Procesador() {

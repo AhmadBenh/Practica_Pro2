@@ -1,4 +1,4 @@
-#include "Cjt_usuarios.hh"
+#include "Cjt_Usuarios.hh"
 using namespace std;
 
 Cjt_Usuarios::Cjt_Usuarios() {
@@ -46,5 +46,11 @@ void Cjt_Usuarios::quitar_usuario(string id){
             found == true;
         }
     }
+}
+
+void Cjt_Usuarios::enviar_proceso_a_usuario(Proceso proceso){
+    Usuario u;
+    bool found = false;
+    
 }
 
