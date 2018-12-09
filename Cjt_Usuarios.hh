@@ -65,6 +65,8 @@ public:
       @coste Constante
   */ 
   void quitar_usuario(string id);
+
+  bool existe_usuario(string id);
   
 };
 

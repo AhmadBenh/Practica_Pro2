@@ -67,6 +67,8 @@ public:
       @coste Constante
   */ 
   void poner_proceso_en_usuario(string iduser, Proceso& p);
+
+  list/* deberia ser una cola */<Proceso> getQueue();
   
   //Destructoras
   /** @brief Destructora por defecto. 

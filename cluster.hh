@@ -62,6 +62,7 @@ public:
    *  @post Devuelve el cluster anterior habiendo avanzado n unidades de tiempo. Si algún proceso acaba durante este tiempo, sale del respectivo procesador
   */
   void avanzar_tiempo(int n);
+
       
 };
 

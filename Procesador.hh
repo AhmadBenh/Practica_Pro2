@@ -61,6 +61,12 @@ public:
    *  @coste Lineal en proporción al tamaño que ocupa el proceso si está en el procesador.
   */ 
   void quitar_proceso_en_procesador(int idproceso, int idprocesador);
+
+  void get_available_positions();
+
+  void add_process();
+
+    void get_processorId();
   
   //Destructoras
   
