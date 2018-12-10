@@ -10,6 +10,7 @@
 #ifndef NO_DIAGRAM
 #include <list>
 #include <string>
+using namespace std;
 #endif
 
 /** @class Usuario
@@ -45,7 +46,7 @@ public:
       @post Devuelve id del usuario consultado.
       @coste Constante
   */ 
-  string Usuario::consultar_usuario();
+  string consultar_usuario();
 
   /** @brief Consultora. 
       @pre <em>cierto</em>
@@ -59,7 +60,7 @@ public:
       @post Devuelve la cantidad de procesos pendientes del usuario.
       @coste Constante
   */ 
-  bool Usuario::busca_l_proceso(Proceso& p);
+  bool busca_l_proceso(Proceso& p);
 
   /** @brief Modificadora de los procesos pendientes
       @pre proceso tiene que existir
@@ -67,6 +68,10 @@ public:
       @coste Constante
   */ 
   void poner_proceso_en_usuario(string iduser, Proceso& p);
+  
+  void escribir_usuario();
+  
+  list<Proceso>::iterator posicion_l();
   
   //Destructoras
   /** @brief Destructora por defecto. 

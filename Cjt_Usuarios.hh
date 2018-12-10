@@ -9,6 +9,7 @@
 #ifndef NO_DIAGRAM
 #include <list>
 #include <string>
+using namespace std;
 #endif
 
 /** @class Conj_Usuarios
@@ -49,7 +50,7 @@ public:
       @post Indica si existe el usuario en el Cjt_Usuarios.
       @coste Constante
   */ 
-  bool buscar_usuario(string id);
+  bool existe_usuario(string id);
 
   //Modificadoras
   /** @brief Crea un usuario con identificador id
@@ -66,7 +67,10 @@ public:
   */ 
   void quitar_usuario(string id);
 
-  bool existe_usuario(string id);
+  
+  list<Usuario> lista_usuario();
+  
+  void escribir_conjunto();
   
 };
 

@@ -7,6 +7,8 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
+#include <string>
+using namespace std;
 #endif
 
 /** @class Proceso
@@ -44,28 +46,30 @@ public:
      *  @post Devuelve el identificador del proceso del parámetro implícito
      *  @coste constante
     */
-    const int consultar_id() const;
+    int consultar_id() const;
 
     /** @brief Consultora con valores
      *  @pre cierto
      *  @post Devuelve el identificador del usuario que contiene al proceso
      *  @coste constante
     */
-    const string consultar_idusu() const;
+    string consultar_idusu() const;
 
     /** @brief Consultora con valores
      *  @pre cierto
      *  @post Devuelve la cantidad de memoria reservada para el proceso, en posiciones de memoria.
      *  @coste constante
     */
-    const int consultar_mem() const;
+    int consultar_mem() const;
 
     /** @brief Consultora con valores
      *  @pre cierto
      *  @post Devuelve el tiempo que necesitará el proceso, en unidades enteras de tiempo
      *  @coste constante
     */
-    const int consultar_time() const; 
+    int consultar_time() const; 
+    
+    void escribir_proceso();
     
     
     //Destructoras
