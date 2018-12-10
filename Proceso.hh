@@ -16,7 +16,7 @@
 class Proceso {
 private: 
     
-    string idpro; //identificador del proceso
+    int idpro; //identificador del proceso
     string idusu;  //identificador del usuario 
     int mem; //cantidad de espacios de memoria que ocupara el proceso
     int time; //unidades de tiempo que el proceso durará en el procesador
@@ -35,7 +35,7 @@ public:
         @post Devuelve un proceso con id "proce", identificador de usuario "usu", ocupación de memoria "mem" y tiempo de ejecución "t"
         @coste Constante
     */ 
-    Proceso(string idprocesador, string iduser, int mem, int t);
+    Proceso(int idprocesador, string iduser, int mem, int t);
     
     
     //Consultoras
@@ -44,28 +44,28 @@ public:
      *  @post Devuelve el identificador del proceso del parámetro implícito
      *  @coste constante
     */
-    const string consultar_id() const;
+    const int consultar_id() const;
 
     /** @brief Consultora con valores
      *  @pre cierto
      *  @post Devuelve el identificador del usuario que contiene al proceso
      *  @coste constante
     */
-    const string Proceso::consultar_idusu() const;
+    const string consultar_idusu() const;
 
     /** @brief Consultora con valores
      *  @pre cierto
      *  @post Devuelve la cantidad de memoria reservada para el proceso, en posiciones de memoria.
      *  @coste constante
     */
-    const int Proceso::consultar_mem() const;
+    const int consultar_mem() const;
 
     /** @brief Consultora con valores
      *  @pre cierto
      *  @post Devuelve el tiempo que necesitará el proceso, en unidades enteras de tiempo
      *  @coste constante
     */
-    const int Proceso::consultar_time() const; 
+    const int consultar_time() const; 
     
     
     //Destructoras

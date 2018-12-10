@@ -52,11 +52,11 @@ public:
       @post Devuelve la cantidad de procesos pendientes del usuario.
       @coste Constante
   */ 
-  int Usuario::size_l_proceso();
+  list<Proceso> lista_procesos_pendientes();
 
   /** @brief Consultora. 
       @pre <em>cierto</em>
-      @post Indica si el proceso existe en la lista de procesos pendientes del usuario
+      @post Devuelve la cantidad de procesos pendientes del usuario.
       @coste Constante
   */ 
   bool Usuario::busca_l_proceso(Proceso& p);

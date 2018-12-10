@@ -49,7 +49,7 @@ public:
       @post Indica si existe el usuario en el Cjt_Usuarios.
       @coste Constante
   */ 
-  bool existe_usuario(string id);
+  bool buscar_usuario(string id);
 
   //Modificadoras
   /** @brief Crea un usuario con identificador id
@@ -64,7 +64,10 @@ public:
       @post Deja de existir el usuario con identificador "id". Si no existe o tiene procesos pendientes no hace nada
       @coste Constante
   */ 
-  void quitar_usuario(string id);  
+  void quitar_usuario(string id);
+
+  bool existe_usuario(string id);
+  
 };
 
 #endif

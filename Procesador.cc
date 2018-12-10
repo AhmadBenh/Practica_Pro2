@@ -14,16 +14,12 @@ Procesador::Procesador(int idprocesador, int mem) {
 	this->mem = mem;
 }
 
-void Procesador::get_processorId(){
-	return idprocesador;
-}
-
-void Procesador::consultar_procesos(int idprocesador){
+void Procesador::consultar_procesador(int idprocesador){
 	Procesador p;
 	p.idprocesador = idprocesador;
 	Proceso test;
 	for(list<Proceso>::iterator it = procesos.begin(); it < procesos.end(); ++it){
-		test = procesos[it];
+		test = *it;
 		cout << test.consultar_id() << ' ' << test.consultar_idusu() << ' ' << test.consultar_mem() << ' ' << test.consultar_time() << endl;
 	}	
 }
@@ -32,6 +28,14 @@ void Procesador::poner_proceso_en_procesador(int id, Proceso proceso){
 	
 }
 
-void PRocesador::quitar_proceso_en_procesador(int idproceso, int idprocesador){
+void Procesador::quitar_proceso_en_procesador(int idproceso, int idprocesador){
 
+}
+
+void get_available_positions(){
+
+}
+
+int Procesador::get_processorId() const{
+	return idprocesador;
 }
