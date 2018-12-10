@@ -47,6 +47,8 @@ public:
   */
   void consultar_procesador(int idprocesador);
 
+  void get_processorId();
+
   //Modificadoras  
   /** @brief Modifica el procesador añadiendo un proceso
    *  @pre id > 0, proceso tiene que existe
@@ -66,8 +68,6 @@ public:
 
   void add_process();
 
-    void get_processorId();
-  
   //Destructoras
   
   /** @brief Destructora por defecto

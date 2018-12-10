@@ -56,7 +56,7 @@ public:
 
   /** @brief Consultora. 
       @pre <em>cierto</em>
-      @post Devuelve la cantidad de procesos pendientes del usuario.
+      @post Indica si el proceso existe en la lista de procesos pendientes del usuario
       @coste Constante
   */ 
   bool Usuario::busca_l_proceso(Proceso& p);
@@ -67,8 +67,6 @@ public:
       @coste Constante
   */ 
   void poner_proceso_en_usuario(string iduser, Proceso& p);
-
-  list/* deberia ser una cola */<Proceso> getQueue();
   
   //Destructoras
   /** @brief Destructora por defecto. 

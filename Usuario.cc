@@ -11,21 +11,20 @@ Usuario::Usuario(string iduser) {
 	this->iduser = iduser;
 }
 
-string Usuario::consultar_usuario() {
-    Usuario u;
-	return u.iduser;
+string Usuario::identificador_usuario() {
+	return iduser;
 }
 
 int Usuario::size_l_proceso(){
-    Usuario u;
-    return u.l_proceso.size();
+    return l_proceso.size();
 }
 
 bool Usuario::busca_l_proceso(Proceso& p){
     bool found = false;
     list<Proceso>::iterator it = l_proceso.begin();
     while(it != l_proceso.end() and not found){
-        if()
+        if(it->consultar_id() == p.consultar_id()) found = true;
+        else found = false;
     }
     if(found) return true;
     else return false;

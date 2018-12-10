@@ -14,6 +14,10 @@ Procesador::Procesador(int idprocesador, int mem) {
 	this->mem = mem;
 }
 
+void Procesador::get_processorId(){
+	return idprocesador;
+}
+
 void Procesador::consultar_procesos(int idprocesador){
 	Procesador p;
 	p.idprocesador = idprocesador;

@@ -21,7 +21,7 @@ void Cjt_Usuarios::consultar_usuario(string id) {
     cout << U.consultar_procesos(l_usu[aux]) << endl;
 }
 
-bool buscar_usuario(string id){
+bool Cjt_Usuarios::existe_usuario(string id){
     Usuario U;
     bool found = false;
     list<Usuario>:iterator it = l_usu.begin();
