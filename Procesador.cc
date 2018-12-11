@@ -6,7 +6,7 @@ using namespace std;
 Procesador::Procesador() {
 	idprocesador = 0;
 	mem = 0;
-	list<Proceso> procesos();
+	list<Proceso> proc_procesos();
 }
 
 Procesador::Procesador(int idprocesador, int mem) {
@@ -25,7 +25,10 @@ void Procesador::consultar_procesador(int idprocesador){
 }
 
 void Procesador::poner_proceso_en_procesador(int id, Proceso proceso){
-	
+	Cjt_Usuarios conj;
+    if(conj.existe_usuario(proceso.consultar_idusu())){
+        
+    }
 }
 
 void Procesador::quitar_proceso_en_procesador(int idproceso, int idprocesador){
@@ -33,7 +36,11 @@ void Procesador::quitar_proceso_en_procesador(int idproceso, int idprocesador){
 }
 
 void get_available_positions(){
-
+    int cont = 0;
+    list<Proceso>::iterator it = proc_procesos.begin();
+    while(it != proc_procesos.end()){
+        
+    }
 }
 
 int Procesador::get_processorId() const{

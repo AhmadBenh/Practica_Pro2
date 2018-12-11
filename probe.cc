@@ -9,7 +9,7 @@ int main() {
     cjt.poner_usuario(id);
     cin >> id >> idp >> mem >> tiempo;
     Proceso p(idp,id,mem,tiempo);
-    u.poner_proceso_en_usuario(id,p);
+    u.proceso_a_usuario(id,p);
     
 }
 

@@ -20,7 +20,7 @@ private:
     
     int idprocesador;       //identificador del procesador
     int mem;     //numero de espacios de memoria del procesador
-    list<Proceso> procesos;     //estructura de la memoria del procesador
+    list<Proceso> proc_procesos;     //estructura de la memoria del procesador
     
 public: 
     

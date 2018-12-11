@@ -8,7 +8,7 @@
 #include "Proceso.hh"
 
 #ifndef NO_DIAGRAM
-#include <list>
+#include <queue>
 #include <string>
 using namespace std;
 #endif
@@ -21,7 +21,8 @@ class Usuario {
 private:
     
     string iduser;     //identificador de usuario con minusculas y numeros 
-    list<Proceso> l_proceso;  //estructura de los procesos pendientes de un usuario                                                                                                          asegurarnos de no llegar a llenar la cola de procesos*/
+    queue<Proceso> c_proc_pend;  //estructura de los procesos pendientes de un usuario                                                                                                          
+    Proceso P;
     
 public: 
 
@@ -53,26 +54,26 @@ public:
       @post Devuelve la cantidad de procesos pendientes del usuario.
       @coste Constante
   */ 
-  list<Proceso> lista_procesos_pendientes();
+  queue<Proceso> procesos_pendientes();
 
   /** @brief Consultora. 
       @pre <em>cierto</em>
       @post Devuelve la cantidad de procesos pendientes del usuario.
       @coste Constante
   */ 
-  bool busca_l_proceso(Proceso& p);
+  bool busca_c_proceso(Proceso& p);
 
   /** @brief Modificadora de los procesos pendientes
       @pre proceso tiene que existir
       @post Devuelve el usuario anterior con el proceso "proceso" en estado pendiente
       @coste Constante
   */ 
-  void poner_proceso_en_usuario(string iduser, Proceso& p);
+  void proceso_a_usuario(string iduser, Proceso& p);
+  
+  void meter_proceso(Proceso& p);
   
   void escribir_usuario();
-  
-  list<Proceso>::iterator posicion_l();
-  
+   
   //Destructoras
   /** @brief Destructora por defecto. 
       @pre <em>cierto</em>

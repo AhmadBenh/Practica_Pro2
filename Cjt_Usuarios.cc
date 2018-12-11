@@ -28,8 +28,8 @@ void Cjt_Usuarios::consultar_usuario(string id) {
     }
     
     if (found) {
-        cout << it->lista_procesos_pendientes().size();
-        cout << ' ' << it->lista_procesos_pendientes().begin()->consultar_id();
+        cout << it->procesos_pendientes().size();
+        cout << ' ' << it->procesos_pendientes().front()->consultar_id();
     }
 }
 
@@ -54,7 +54,7 @@ void Cjt_Usuarios::poner_usuario(string id){
 void Cjt_Usuarios::quitar_usuario(string id){
     list<Usuario>::iterator it = l_usu.begin();
     while(it != l_usu.end()){
-        if (id == it->consultar_usuario() and it->lista_procesos_pendientes().empty()) {
+        if (id == it->consultar_usuario() and it->procesos_pendientes().empty()) {
             l_usu.erase(it);
         }
         else ++it;
@@ -67,11 +67,8 @@ list<Usuario> Cjt_Usuarios::lista_usuario() {
   
 void Cjt_Usuarios::escribir_conjunto() {
     list<Usuario>::iterator it = l_usu.begin();
-    int i = 0;
     while(it != l_usu.end()) {
-        if (i != it->lista_procesos_pendientes().size()) {
-        it->posicion_l()->escribir_proceso();
-        }
+        it->escribir_usuario();
     }
 }
 

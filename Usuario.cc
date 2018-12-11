@@ -3,7 +3,7 @@ using namespace std;
 
 Usuario::Usuario() {
 	string iduser = "empty";
-	list<Proceso> l_proceso;
+	queue<Proceso> c_proc_pend;
     Proceso P;
 }
 
@@ -15,45 +15,41 @@ string Usuario::consultar_usuario() {
 	return iduser;
 }
 
-list<Proceso> Usuario::lista_procesos_pendientes() {
-    return l_proceso;
+queue<Proceso> Usuario::procesos_pendientes() {
+    return c_proc_pend;
 }
 
-bool Usuario::busca_l_proceso(Proceso& p){
+bool Usuario::busca_c_proceso(Proceso& p){
     bool found = false;
-    list<Proceso>::iterator it = l_proceso.begin();
-    while(it != l_proceso.end() and not found){
-        if(p.consultar_idusu() == it->consultar_idusu()) found = true;
+    int i = 0;
+    while(i != c_proc_pend().size() and not found){
+        if(p.consultar_idusu() == i->consultar_idusu()) found = true;
     }
     if(found) return true;
     else return false;
 }
 
-void Usuario::poner_proceso_en_usuario(string iduser, Proceso& p) {
-    list<Proceso>::iterator it = l_proceso.begin();
+void Usuario::proceso_a_usuario(string iduser, Proceso& p) {
     bool found = false;
-    while(it != l_proceso.end() and not found) {
-        if (it->consultar_idusu() == iduser) {
+    int i = 0;
+    while(i != c_proc_pend().size() and not found) {
+        if (i->consultar_idusu() == iduser) {
             found = true;
         }
         else ++it;
     }
-    if (not found) {
-        it = l_proceso.end();
-        l_proceso.insert(it,p);
-    }
+    if (not found) meter_proceso(p);
 }
 
-void Usuario::escribir_usuario() {
-    list<Proceso>::iterator it = l_proceso.begin();
-    while (it != l_proceso.end()) {
-        it->escribir_proceso(); ++it;
-    }
+void Usuario::meter_proceso(Proceso& p) {
+    c_proc_pend.push(p);
 }
 
- list<Proceso>::iterator Usuario::posicion_l(){
-      list<Proceso>::iterator it = l_proceso.begin();
-      return it;
+void Usuario::escribir_usuario(){
+    while(not procesos_pendientes().empty()){
+        procesos_pendientes().front().escribir_proceso();
+        procesos_pendientes().pop();
+    }
 }
 
 Usuario::~Usuario() {}
