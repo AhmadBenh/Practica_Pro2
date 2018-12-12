@@ -31,7 +31,7 @@ int Procesador::posiciones_memoria(){
 	// como saco el proceso del vector
 	int cont = 0;
 	for(int i = 0; i < proc_procesos.size(); ++i){
-		if(){
+		if(proc_procesos[i].consultar_memo()){
 			++cont;
 			return i;
 		}
