@@ -32,10 +32,10 @@ int Procesador::posiciones_memoria(){
 	int cont = 0;
 	for(int i = 0; i < proc_procesos.size(); ++i){
 		if(proc_procesos[i].consultar_memo()){
-			++cont;
+			
 			return i;
 		}
-		else return 0;
+		else{};
 	}
 }
 
