@@ -60,7 +60,7 @@ public:
      *  @post Devuelve la cantidad de memoria reservada para el proceso, en posiciones de memoria.
      *  @coste constante
     */
-    int consultar_mem() const;
+    int consultar_memo() const;
 
     /** @brief Consultora con valores
      *  @pre cierto

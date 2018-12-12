@@ -23,7 +23,7 @@ string Proceso::consultar_idusu() const {
     return idusu;
 }
 
-int Proceso::consultar_mem() const {
+int Proceso::consultar_memo() const {
     return mem;
 }
 

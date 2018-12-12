@@ -24,7 +24,7 @@ private:
     int num_proc; 
     /* estructura del cluster */
     BinTree<int> claster;
-    //vector<Procesador> Proc;
+    vector<Procesador> Proc;
 
 
 public:
@@ -44,6 +44,29 @@ public:
    * @coste Constante
   */
   ~Cluster();
+
+  //Consultoras
+  /** @brief Escribe la información del procesador
+   *  @pre idenproce > 0
+   *  @post Escribe los datos de los procesos activos en el procesador con id "idprocesador"
+   *  @coste Lineal dependiendo de la busqueda que se haga en el arbol, en el procesador y en la memoria de este
+  */
+  void consultar_procesador(int idprocesador);
+
+  //Modificadoras  
+  /** @brief Modifica el procesador añadiendo un proceso
+   *  @pre id > 0, proceso tiene que existe
+   *  @post Devuelve el proceso anterior con el nuevo proceso si cabe en el procesador
+   *  @coste Lineal en proporción al tamaño que ocupa el proceso si cabe en el procesador
+  */
+  void poner_proceso_en_procesador(int id, Proceso proceso, Cjt_Usuarios cjnt);
+
+  /** @brief Modifica el procesador quitando un proceso.
+   *  @pre id > 0
+   *  @post El resultado es el proceso anterior sin el proceso con id "idproceso" del procesador con id "idprocesador" (en caso de que esté en el procesador).
+   *  @coste Lineal en proporción al tamaño que ocupa el proceso si está en el procesador.
+  */ 
+  void quitar_proceso_en_procesador(int idproceso, int idprocesador);
 
   //Modificadoras  
   /** @brief Configura el cluster y lo inicializa   
